@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::middleware('api')->get('/test', function ()
+{
+	return $array = [
+   		 "foo" => "bar",
+    		 "bar" => "foo",
+		];;
+		//print_r($array);
+});
+
+Route::middleware('api')->get('/testReq', 'testRequete@testfunction');
+
